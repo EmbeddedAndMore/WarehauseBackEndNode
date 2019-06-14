@@ -1,0 +1,26 @@
+{
+  "name": "warehausapp",
+  "version": "1.0.0",
+  "description": "This is for Advanced web technology course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmbeddedAndMore/WarehauseBackEndNode.git"
+  },
+  "author": "Mohammad Armoun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmbeddedAndMore/WarehauseBackEndNode/issues"
+  },
+  "homepage": "https://github.com/EmbeddedAndMore/WarehauseBackEndNode#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  }
+}
