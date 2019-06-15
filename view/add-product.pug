@@ -6,24 +6,25 @@ html
         link(rel='stylesheet' href='/bootstrap/bootstrap.css')
     body
         include _navbar
-        div.container
-            div.row.mt-5
-                div.col-md-4
-                div.col-md-4
-                    h1 Add Product
-            div.row
-                div.col-md-4
-                div.col-md-4.form-group
-                    input.form-control(type='text' placeholder='Prodcut Name')
-            div.row
-                div.col-md-4
-                div.col-md-4.form-group
-                    input.form-control(type='text' placeholder='Prodcut Owner')
-            div.row
-                div.col-md-4
-                div.col-md-4.form-group
-                    input.form-control(type='text' placeholder='Prodcut Description')
-            div.row
-                div.col-md-4
-                div.col-md-4.form-group
-                    input.btn.btn-primary(type='button' value='Submit')
+        form(method='POST' action='/addproduct')
+            div.container
+                div.row.mt-5
+                    div.col-md-4
+                    div.col-md-4
+                        h1 Add Product
+                div.row
+                    div.col-md-4
+                    div.col-md-4.form-group
+                        input#name.form-control(type='text' placeholder='Prodcut Name' name='name')
+                div.row
+                    div.col-md-4
+                    div.col-md-4.form-group
+                        input#ownerName.form-control(type='text' placeholder='Prodcut Owner' name='ownerName')
+                div.row
+                    div.col-md-4
+                    div.col-md-4.form-group
+                        input#description.form-control(type='text' placeholder='Prodcut Description' name='description')
+                div.row
+                    div.col-md-4
+                    div.col-md-4.form-group
+                        input.btn.btn-primary(type='submit' value='Submit')

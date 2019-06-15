@@ -1,8 +1,31 @@
 doctype html
 
+
 html
     head
         title= title
         link(rel='stylesheet' href='/bootstrap/bootstrap.css')
+        script(src="/controller/productController.js")
     body
         include _navbar
+        div.container
+            div.row
+            div.col-md-12
+            table.table.table-striped
+                thead
+                    tr
+                        th Name
+                        th Description
+                        th EnterDate
+                        th OwnerName
+                        th Delete
+                tbody
+                    each product in data
+                        tr(style={cursor: 'pointer'})
+                            input(hidden value= product._id)
+                            td= product.name
+                            td= product.description
+                            td= product.entrDate
+                            td= product.ownerName
+                            td
+                                a(href='/deleteproduct?id='+product._id) Delete

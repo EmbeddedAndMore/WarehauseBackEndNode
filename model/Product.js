@@ -13,5 +13,13 @@ mongoose.model('product', productSchema);
 function getAllProducts(){
     return mongoose.model('product').find();
 }
-
-module.exports = {getAllProducts};
+function addProduct(product){
+    mongoose.model('product').create(product,function(err,product){
+    });
+}
+function removeProduct(id)
+{
+    mongoose.model('product').deleteOne({_id:id},function(err,product){
+    });
+}
+module.exports = {getAllProducts,addProduct,removeProduct};
