@@ -1,3 +1,19 @@
+
+mixin table(header,data,type)
+    - var type = type || ""
+    table.table(class=type)
+        thead
+            tr
+                each head, i in header
+                    th #{head}
+        tbody
+            each row,j in data
+                tr
+                    each col,k in row
+                        td #{col}
+
+mixin table-striped(header,data)
+    +table(header,data,"table-striped")
 doctype html
 
 html
@@ -6,4 +22,21 @@ html
         link(rel='stylesheet' href='/bootstrap/bootstrap.css')
     body
         include _navbar.pug
+        div.container
+            div.row
+            div.col-md-12
+            table.table.table-striped
+                thead
+                    tr
+                        th Name
+                        th Description
+                        th EnterDate
+                        th OwnerName
+                tbody
+                    each product in data
+                        tr
+                            td= product.name
+                            td= product.description
+                            td= product.entrDate
+                            td= product.ownerName
         

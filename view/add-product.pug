@@ -6,3 +6,24 @@ html
         link(rel='stylesheet' href='/bootstrap/bootstrap.css')
     body
         include _navbar
+        div.container
+            div.row.mt-5
+                div.col-md-4
+                div.col-md-4
+                    h1 Add Product
+            div.row
+                div.col-md-4
+                div.col-md-4.form-group
+                    input.form-control(type='text' placeholder='Prodcut Name')
+            div.row
+                div.col-md-4
+                div.col-md-4.form-group
+                    input.form-control(type='text' placeholder='Prodcut Owner')
+            div.row
+                div.col-md-4
+                div.col-md-4.form-group
+                    input.form-control(type='text' placeholder='Prodcut Description')
+            div.row
+                div.col-md-4
+                div.col-md-4.form-group
+                    input.btn.btn-primary(type='button' value='Submit')
